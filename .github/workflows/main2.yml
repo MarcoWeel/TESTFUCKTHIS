@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - uses: actions/checkout@v2
     - name: Build the Docker image
+      working-directory: ${{ github.workspace }}
       run: |
-        ls -R /github/workspace/
+        ls -R 
