@@ -22,3 +22,8 @@ jobs:
       with:
         name: jmeter-results
         path: result.jtl
+    - name: Run JMeter Tests
+      uses: rbhadti94/apache-jmeter-action@v0.5.0
+      with:
+        testFilePath: './test.jmx'
+        outputReportsFolder: reports/
