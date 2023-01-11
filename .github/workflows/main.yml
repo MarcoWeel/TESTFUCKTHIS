@@ -12,9 +12,9 @@ jobs:
 
     steps:
     - name: JMeter Test
+      working-directory: ${{ github.workspace }}
       uses: QAInsights/PerfAction@v3.1
       with:
-        working-directory: ${{ github.workspace }}
         test-plan-path: test.jmx
         args: ""
     - name: Upload Results
