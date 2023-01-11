@@ -1,0 +1,17 @@
+name: PAINWRITING
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+
+  buildtest:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: |
+        ls -R /github/workspace/
