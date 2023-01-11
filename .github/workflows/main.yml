@@ -1,0 +1,23 @@
+name: PAIN
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+
+  buildtest:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: JMeter Test
+      uses: QAInsights/PerfAction@v3.1
+      with:
+        test-plan-path: ./TestPlans/S01_SimpleExample/S01_SimpleExample.jmx
+        args: ""
+    - name: Upload Results
+      uses: actions/upload-artifact@v2
+      with:
+        name: jmeter-results
+        path: result.jtl
