@@ -2,7 +2,7 @@ name: PAIN
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "Master" ]
 
 jobs:
 
